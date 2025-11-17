@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Stack_Sans_Notch } from "next/font/google";
 import "./globals.css";
-
+import { ThemeProvider } from "next-themes";
+import Navbar from "@/components/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
+const stackSansNotch=Stack_Sans_Notch({
+  variable:"--font-stack-sans-notch",
+  subsets:["latin"]
+})
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -23,11 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${stackSansNotch.variable} antialiased min-h-screen bg-linear-to-t dark:bg-linear-to-t from-[#ffffff] to-[#fdfcff] via-[#f7f1fc] via-10% dark:from-[#0b0b0b] dark:to-[#000000] dark:via-[#080808] via-10%  
+        `}
       >
-        {children}
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+         
+          <div className=" z-50 min-h-screen h-full absolute border border-neutral-100 dark:border-neutral-950 left-1/6"/>
+          <div className=" z-50 min-h-screen h-full absolute border border-neutral-100 dark:border-neutral-950 right-1/6"/>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
