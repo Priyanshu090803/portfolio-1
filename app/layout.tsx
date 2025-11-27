@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${stackSansNotch.variable} antialiased min-h-screen bg-linear-to-t dark:bg-linear-to-t from-[#ffffff] to-[#fdfcff] via-[#f7f1fc] via-10% dark:from-[#0b0b0b] dark:to-[#000000] dark:via-[#080808] via-10% scrollbar-hide   
+        className={`${geistSans.variable} ${geistMono.variable} ${stackSansNotch.variable} antialiased min-h-screen bg-linear-to-t dark:bg-linear-to-t from-[#ffffff] to-[#fffeff] via-[#faf5fd] via-10% dark:from-[#0b0b0b] dark:to-[#000000] dark:via-[#080808] via-10% scrollbar-hide   
         `}
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
