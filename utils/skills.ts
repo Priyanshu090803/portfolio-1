@@ -18,7 +18,7 @@ export const skills = [
     { name: "Socket.io", icon: SiSocketdotio, color: "#000000", colorDark: "#ffffff" },
     { name: "Mongoose", icon: SiMongoose, color: "#880000" },
     { name: "Redis", icon: SiRedis, color: "#DC382D" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "Tailwind  ", icon: SiTailwindcss, color: "#06B6D4" },
     { name: "Express", icon: SiExpress, color: "#000000", colorDark: "#ffffff" },
     { name: "Python", icon: FaPython, color: "#3776AB" },
     { name: "Figma", icon: FaFigma, color: "#F24E1E" },

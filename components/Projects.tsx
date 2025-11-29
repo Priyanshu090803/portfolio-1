@@ -88,8 +88,8 @@ const TechIcon = ({ name }: { name: string }) => {
 
 export function Projects() {
     return (
-        <div className="w-full py-10 max-w-5xl mx-auto px-6">
-            <div className="mb-8 px-3">
+        <div className="w-full py-10 max-w-5xl mx-auto px-3">
+            <div className="mb-8 ">
                 <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Featured</span>
                 <h2 className="text-4xl font-black text-neutral-700 dark:text-neutral-200">
                     Projects
