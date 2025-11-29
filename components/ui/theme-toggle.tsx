@@ -6,7 +6,7 @@ import { Moon, SunDim } from 'lucide-react'
 const ThemeToggle = () => {
     const {theme,setTheme}=useTheme()
     function handleTheme(){
-      const audio = new Audio("/main-click.mp3");
+      const audio = new Audio("/clickone.mp3");
       audio.play().catch((error) => {
         console.error("Error playing audio:", error);
       });

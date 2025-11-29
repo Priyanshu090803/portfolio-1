@@ -4,26 +4,28 @@ import { Button } from './ui/button';
 import { IoDocumentTextOutline } from 'react-icons/io5';
 import Link from 'next/link';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
+import { SocialLinks } from './SocialLinks';
+import Skills from './Skills';
 
 const Hero = async () => {
-   
+
   return (
-    <div className='min-h-screen w-full px-64 py-15 font-stack relative'>
-      
+    <div className='min-h-screen w-full   relative'>
+
       {/* Random Decorations */}
       <div className="absolute border w-full left-0 top-100 border-[#f1f1f1] dark:border-[#0c0c0c]" />
 
       {/* Profile Section */}
       <div className="space-y-6 w-full ">
         <div className="border-black px-3  rounded-lg flex gap-2 items-end">
-          <Image 
+          <Image
             src="/pfp.PNG"
             alt="profile-pic"
             width={400}
             height={600}
             className="border h-40 w-40 object-cover object-top rounded-2xl dark:hidden"
           />
-          <Image 
+          <Image
             src="/batman1.png"
             alt="profile-pic-dark"
             width={400}
@@ -41,7 +43,7 @@ const Hero = async () => {
 
         {/* Header Text */}
         <h1 className=" px-3 text-6xl font-black text-neutral-700 dark:text-white">
-          HIE, my name is 
+          HIE, my name is
           <span className="text-[#c562fa] dark:text-[#626161]"> PRIYANshu</span>
         </h1>
 
@@ -60,21 +62,21 @@ const Hero = async () => {
             </span>
           </div>
 
-             <div className=' space-y-4 rounded-b-lg border-b w-full -mt-2  py-4 px-4 bg-linear-to-b from-[#f4eff7] to-[rgb(255,252,255)] dark:from-[#030303] dark:to-[rgb(18,17,18)] shadow-md shadow-neutral-200 dark:shadow-neutral-900'>
-          {/* Tech Line */}
-          <p className="text-neutral-400 dark:text-neutral-300 leading-relaxed">
-            Full-stack developer focused on interactive UI, scalable backend systems, and applied GenAI , 
-            
-            {/* Tech Stack Map */}
-            {techStack.map((tech) => {
-              const Icon = tech.icon;
-              return (
-                <a
-                  key={tech.name}
-                  href={tech.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" hover:text-[#c562fa] dark:hover:text-[#7f728d] inline-flex items-center gap-1 cursor-pointer border border-neutral-300 px-2 py-1 rounded-md ml-1
+          <div className=' space-y-4 rounded-b-lg border-b border-t w-full -mt-2  py-4 px-4 bg-linear-to-b from-[#f4eff7] to-[rgb(255,252,255)] dark:from-[#030303] dark:to-[rgb(18,17,18)] border-neutral-200 dark:border-neutral-900'>
+            {/* Tech Line */}
+            <p className="text-neutral-400 dark:text-neutral-300 leading-relaxed">
+              Full-stack developer focused on interactive UI, scalable backend systems, and applied GenAI ,
+
+              {/* Tech Stack Map */}
+              {techStack.map((tech) => {
+                const Icon = tech.icon;
+                return (
+                  <a
+                    key={tech.name}
+                    href={tech.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" hover:text-[#c562fa] dark:hover:text-[#7f728d] inline-flex items-center gap-1 cursor-pointer border border-neutral-300 px-2 py-1 rounded-md ml-1
                   hover:bg-neutral-100 dark:hover:bg-neutral-800  
                   bg-linear-to-t from-[#e8e8e8] to-[#f2f2f2]
                   dark:bg-linear-to-t dark:from-[#252525] dark:to-[#545454]
@@ -82,24 +84,24 @@ const Hero = async () => {
                   hover:-translate-y-0.5 translate-y-0 duration-100 delay-75 transition-all ease-in-out 
                   "
                   >
-                  <Icon className="h-4 w-4 " />
-                  {tech.name}
-                </a>
-              );
-            })}
-            
-            {" "} and many more.
-          </p>
+                    <Icon className="h-4 w-4 " />
+                    {tech.name}
+                  </a>
+                );
+              })}
 
-          <p className="text-neutral-400 dark:text-neutral-300 text-sm font-extralight ">
-            —— I prefer startups because they move fast as I ——
-          </p>
+              {" "} and many more.
+            </p>
 
-          <div className=' flex gap-4 py-4'>
-          <Link
-          href="https://docs.google.com/document/d/1Rtj4lzetbkw3hBYM6ylbnqxDvwkpd0la0UZDbEPI-W0/edit?usp=sharing"
-          target="_blank"
-          className="
+            <p className="text-neutral-400 dark:text-neutral-300 text-sm font-extralight ">
+              —— I prefer startups because they move fast as I ——
+            </p>
+
+            <div className=' flex gap-4 py-4'>
+              <Link
+                href="https://docs.google.com/document/d/1Rtj4lzetbkw3hBYM6ylbnqxDvwkpd0la0UZDbEPI-W0/edit?usp=sharing"
+                target="_blank"
+                className="
             hover:-translate-y-0.5  translate-y-0
 
             inline-flex items-center gap-1 px-3 py-2 rounded-lg
@@ -108,27 +110,25 @@ const Hero = async () => {
             /* 🌞 Light mode */
             bg-linear-to-b from-[#fefbff] to-[#f2e4fc] hover:from-[#fbf6fd] hover:to-[#edd4ff]  text-neutral-500
             hover:text-neutral-700
-            border border-neutral-200
-            shadow-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)]
+            border-t border-b border-neutral-200
             hover:bg-neutral-50
             ease-in-out
             /* 🌙 Dark mode */
             dark:bg-linear-to-b dark:from-[#4c4a4c] dark:to-[#181618] dark:hover:from-[#7f6281] dark:hover:to-[#140f17]  dark:text-neutral-200
             dark:hover:text-neutral-100
-            dark:border-neutral-700
-            dark:shadow-[0_1px_3px_rgba(0,0,0,0.55)]
+            dark:border-t dark:border-b dark:border-neutral-700
             dark:hover:bg-neutral-800
           "
-        >
-          Resume / CV  
+              >
+                Resume / CV
 
-          <IoDocumentTextOutline className="h-4 w-4 rotate-20" />
-        </Link>
+                <IoDocumentTextOutline className="h-4 w-4 rotate-20" />
+              </Link>
 
-            <Link 
-              href="https://docs.google.com/document/d/1Rtj4lzetbkw3hBYM6ylbnqxDvwkpd0la0UZDbEPI-W0/edit?usp=sharing" 
-              target="_blank" 
-              className=" 
+              <Link
+                href="https://docs.google.com/document/d/1Rtj4lzetbkw3hBYM6ylbnqxDvwkpd0la0UZDbEPI-W0/edit?usp=sharing"
+                target="_blank"
+                className=" 
               hover:-translate-y-0.5  translate-y-0
                 inline-flex items-center gap-1 px-3 py-2 rounded-lg 
                 transition-all   cursor-pointer 
@@ -138,8 +138,7 @@ const Hero = async () => {
                 hover:from-[#7f6281] hover:to-[#140f17]  
                 text-neutral-100 
                 hover:text-neutral-50 
-                border border-neutral-700 
-                shadow-sm shadow-[0_1px_3px_rgba(0,0,0,0.55)] 
+                border-t border-b border-neutral-700 
                 hover:bg-neutral-800
                 
                 /* 🌙 Dark mode (light gradient) */ 
@@ -147,18 +146,21 @@ const Hero = async () => {
                 dark:hover:from-[#fbf6fd] dark:hover:to-[#edd4ff]  
                 dark:text-neutral-500 
                 dark:hover:text-neutral-700 
-                dark:border-neutral-200 
-                dark:shadow-[0_1px_3px_rgba(0,0,0,0.08)] 
+                dark:border-t dark:border-b dark:border-neutral-200 
                 dark:hover:bg-neutral-50
                   duration-300 ease-in-out 
-              " 
-            > 
-              Get in touch 
-              <MdOutlinePhoneInTalk className="h-4 w-4 rotate-20" /> 
-            </Link>
+              "
+              >
+                Get in touch
+                <MdOutlinePhoneInTalk className="h-4 w-4 -rotate-" />
+              </Link>
+
+            </div>
+            {/* Social Icons Section - Added as per request */}
+            <SocialLinks />
 
           </div>
-         </div>
+          <Skills />
         </div>
 
       </div>

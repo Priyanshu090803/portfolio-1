@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Stack_Sans_Notch } from "next/font/google";
+import { Geist, Geist_Mono, Stack_Sans_Notch } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
+import BackgroundBats from "@/components/BackgroundBats";
+import BackgroundIconsLight from "@/components/BackgroundIconsLight";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-const stackSansNotch=Stack_Sans_Notch({
-  variable:"--font-stack-sans-notch",
-  subsets:["latin"]
+const stackSansNotch = Stack_Sans_Notch({
+  variable: "--font-stack-sans-notch",
+  subsets: ["latin"]
 })
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -29,13 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${stackSansNotch.variable} antialiased min-h-screen bg-linear-to-t dark:bg-linear-to-t from-[#ffffff] to-[#fffeff] via-[#faf5fd] via-10% dark:from-[#0b0b0b] dark:to-[#000000] dark:via-[#080808] via-10% scrollbar-hide   
+        className={`${geistSans.variable} ${geistMono.variable} ${stackSansNotch.variable} antialiased min-h-screen bg-linear-to-t dark:bg-linear-to-t from-[#ffffff] to-[#fffeff] via-[#faf5fd] via-10% dark:from-[#0b0b0b] dark:to-[#000000] dark:via-[#080808] via-10% scrollbar-hide relative   
         `}
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
-         
-          <div className="   min-h-screen h-full absolute border border-[#f4f3f3] dark:border-neutral-950 left-1/6"/>
-          <div className="  min-h-screen h-full absolute border border-[#f4f3f3] dark:border-neutral-950 right-1/6"/>
+
+          <BackgroundBats />
+          <BackgroundIconsLight />
+          <div className=" z-10  min-h-screen h-full absolute border border-[#f4f3f4] dark:border-neutral-950 left-1/6" />
+          <div className=" z-10  min-h-screen h-full absolute border border-[#f4f3f4] dark:border-neutral-950 right-1/6" />
           <Navbar />
           {children}
         </ThemeProvider>
