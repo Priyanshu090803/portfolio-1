@@ -1,6 +1,6 @@
 // import { skills } from "@/utils/skills";
 // import { motion } from 'motion/react';
- 
+
 
 // const Skills = () => {
 //   return (
@@ -20,7 +20,7 @@
 //       >
 //         Tech-Tools
 //       </motion.p>
-      
+
 //       <motion.div 
 //         initial="hidden"
 //         whileInView="visible"
@@ -104,7 +104,7 @@
 //                   style={{ color: "inherit" }}
 //                 />
 //               </motion.div>
-              
+
 //               <motion.span 
 //                 initial={{ opacity: 0, y: 5 }}
 //                 whileHover={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@
 // export default Skills;
 // import { skills } from "@/utils/skills";
 // import { motion } from 'motion/react';
- 
+
 
 // const Skills = () => {
 //   return (
@@ -144,7 +144,7 @@
 //       >
 //         Tech-Tools
 //       </motion.p>
-      
+
 //       <motion.div 
 //         initial="hidden"
 //         whileInView="visible"
@@ -228,7 +228,7 @@
 //                   style={{ color: "inherit" }}
 //                 />
 //               </motion.div>
-              
+
 //               <motion.span 
 //                 initial={{ opacity: 0, y: 5 }}
 //                 whileHover={{ opacity: 1, y: 0 }}
@@ -248,18 +248,18 @@
 // export default Skills;
 import { skills } from "@/utils/skills";
 import { motion } from 'motion/react';
- 
+
 
 const Skills = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1, ease: "easeOut" }}
       className='space-y-4 mb-4 rounded-lg w-full -mt-2 py-4 px-4'
     >
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -268,8 +268,8 @@ const Skills = () => {
       >
         Tech-Tools
       </motion.p>
-      
-      <motion.div 
+
+      <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -289,13 +289,13 @@ const Skills = () => {
             <motion.div
               key={skill.name}
               variants={{
-                hidden: { 
-                  opacity: 0, 
+                hidden: {
+                  opacity: 0,
                   scale: 0.8,
                   y: 20
                 },
-                visible: { 
-                  opacity: 1, 
+                visible: {
+                  opacity: 1,
                   scale: 1,
                   y: 0,
                   transition: {
@@ -304,15 +304,15 @@ const Skills = () => {
                   }
                 }
               }}
-              whileHover={{ 
+              whileHover={{
                 y: -4,
                 scale: 1.05,
-                transition: { 
+                transition: {
                   duration: 0.2,
                   ease: "easeOut"
                 }
               }}
-              whileTap={{ 
+              whileTap={{
                 scale: 0.95,
                 transition: { duration: 0.1 }
               }}
@@ -332,10 +332,10 @@ const Skills = () => {
               }}
             >
               <motion.div
-                whileHover={{ 
+                whileHover={{
                   scale: 1.15,
                   rotate: [0, -5, 5, 0],
-                  transition: { 
+                  transition: {
                     rotate: {
                       duration: 0.5,
                       ease: "easeInOut"
@@ -352,15 +352,13 @@ const Skills = () => {
                   style={{ color: "inherit" }}
                 />
               </motion.div>
-              
-              <motion.span 
-                initial={{ opacity: 0, y: 5 }}
-                whileHover={{ opacity: 1, y: 0 }}
-                transition={{ duration: 2 }}
-                className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-neutral-800 dark:bg-neutral-700 rounded whitespace-nowrap pointer-events-none z-10 shadow-lg"
+
+              <span
+
+                className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-neutral-800 dark:bg-neutral-700 rounded whitespace-nowrap pointer-events-none z-10 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               >
                 {skill.name}
-              </motion.span>
+              </span>
             </motion.div>
           );
         })}

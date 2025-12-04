@@ -27,7 +27,7 @@ const BackgroundBats = () => {
                     alt="Bat 1"
                     width={80}
                     height={80}
-                    className="opacity-30 md:opacity-60 dark:invert w-10 h-auto md:w-20"
+                    className="opacity-30 md:opacity-60 dark:invert w-10 h-auto lg:w-20"
                 />
             </motion.div>
 
@@ -52,7 +52,7 @@ const BackgroundBats = () => {
                     alt="Bat 2"
                     width={100}
                     height={100}
-                    className="opacity-30 md:opacity-60 dark:invert w-12 h-auto md:w-24"
+                    className="opacity-30 md:opacity-60 dark:invert w-12 h-auto lg:w-24"
                 />
             </motion.div>
 
@@ -77,7 +77,7 @@ const BackgroundBats = () => {
                     alt="Bat 3"
                     width={60}
                     height={60}
-                    className="opacity-40 dark:invert w-8 h-auto md:w-16"
+                    className="opacity-40 dark:invert w-8 h-auto lg:w-16"
                 />
             </motion.div>
 
@@ -102,7 +102,7 @@ const BackgroundBats = () => {
                     alt="Bat 4"
                     width={70}
                     height={70}
-                    className="opacity-50 dark:invert w-8 h-auto md:w-16"
+                    className="opacity-50 dark:invert w-8 h-auto lg:w-16"
                 />
             </motion.div>
 
@@ -127,7 +127,7 @@ const BackgroundBats = () => {
                     alt="Bat 5"
                     width={50}
                     height={50}
-                    className="opacity-40 dark:invert w-6 h-auto md:w-12"
+                    className="opacity-40 dark:invert w-6 h-auto lg:w-12"
                 />
             </motion.div>
 
@@ -152,7 +152,7 @@ const BackgroundBats = () => {
                     alt="Bat 6"
                     width={90}
                     height={90}
-                    className="opacity-50 dark:invert w-10 h-auto md:w-24"
+                    className="opacity-50 dark:invert w-10 h-auto lg:w-24"
                 />
             </motion.div>
         </div>
